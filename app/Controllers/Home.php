@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index(): string
     {
         $data = [
-            'judul' => 'Dashboard',
+            'title' => 'Dashboard',
         ];
         return view('layouts\dashboard', $data);
     }
