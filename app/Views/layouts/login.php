@@ -30,6 +30,10 @@
               <option value="3">Teacher</option>
             </select>
             <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="nim" placeholder="NIM" name="nim">
+              <label for="nim">NIM</label>
+            </div>
+            <div class="form-floating mb-3">
               <input type="password" class="form-control" id="password" placeholder="Password" name="password">
               <label for="password">Password</label>
             </div>
