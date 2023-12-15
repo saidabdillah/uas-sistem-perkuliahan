@@ -7,11 +7,6 @@ class LoginController extends BaseController
 {
   public function create(): string
   {
-    $userModel = new \App\Models\UserModel();
-
-    $user = $userModel->findAll();
-    var_dump($user);
-
     $data = [
       'title' => 'Login',
     ];
