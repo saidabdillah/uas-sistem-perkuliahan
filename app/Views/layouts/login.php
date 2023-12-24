@@ -19,15 +19,14 @@
     <section class="container" id="login">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-6 col-md-4">
-          <h3 class="text-center mb-4">Login</h3>
+          <h3 class="text-center text-primary mb-4">Login</h3>
 
           <form action="/login" method="post">
             <?= csrf_field(); ?>
-            <select class="form-select py-3 mb-3" aria-label="Role" name="role">
+            <select class="form-select py-3 mb-3 " aria-label="Role" name="role">
               <option selected>Role</option>
               <option value="1">Admin</option>
-              <option value="2">Student</option>
-              <option value="3">Teacher</option>
+              <option value="2">Mahasiswa</option>
             </select>
             <div class="form-floating mb-3">
               <input type="number" class="form-control" id="nim" placeholder="NIM" name="nim">
@@ -38,7 +37,7 @@
               <label for="password">Password</label>
             </div>
             <div class="d-grid grid-2">
-              <button type="submit" class="btn btn-dark">Login</button>
+              <button type="submit" class="btn btn-primary">Login</button>
             </div>
           </form>
         </div>

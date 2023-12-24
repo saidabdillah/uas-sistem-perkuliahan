@@ -2,12 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\MataKuliahModel;
+
 class MataKuliahController extends BaseController
 {
   private $mataKuliah;
   public function __construct()
   {
-    $this->mataKuliah = new \App\Models\MataKuliahModel();
+    $this->mataKuliah = new MataKuliahModel();
   }
 
   public function test()
@@ -68,7 +70,7 @@ class MataKuliahController extends BaseController
     $this->mataKuliah->insert($mataKuliah);
 
     $session->setFlashdata('berhasil', 'Mata Kuliah Berhasil Ditambahkan.');
-    return redirect()->to('/dashboard/matakuliah');
+    return redirect()->to('/matakuliah');
   }
 
   public function edit($kodeMataKuliah)
@@ -116,13 +118,13 @@ class MataKuliahController extends BaseController
     $this->mataKuliah->where('kode_mata_kuliah', $kodeMataKuliah)->set($mataKuliah)->update();
 
     $session->setFlashdata('berhasil', 'Mata Kuliah Berhasil Diubah.');
-    return redirect()->to('/dashboard/matakuliah');
+    return redirect()->to('/matakuliah');
   }
 
   public function delete($kodeMataKuliah)
   {
     $session = \Config\Services::session();
     $this->mataKuliah->where('kode_mata_kuliah', $kodeMataKuliah)->delete();
-    return redirect()->to('/dashboard/matakuliah')->with('berhasil', 'Mata Kuliah Berhasil Dihapus.');
+    return redirect()->to('/matakuliah')->with('berhasil', 'Mata Kuliah Berhasil Dihapus.');
   }
 }

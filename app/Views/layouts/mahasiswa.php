@@ -33,25 +33,24 @@
                     <th>Jenis Kelamin</th>
                     <th>Email</th>
                     <th>Alamat</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Muhammad Said Abdillah</td>
-                    <td>220110054</td>
-                    <td>Ilmu Komputer</td>
-                    <td>Laki - laki</td>
-                    <td>msaidabdillah18@gmail.com</td>
-                    <td>Kelua</td>
-                  </tr>
-                  <tr>
-                    <td>Arifurrahman</td>
-                    <td>220110056</td>
-                    <td>Ilmu Komputer</td>
-                    <td>Laki - laki</td>
-                    <td>msaidabdillah18@gmail.com</td>
-                    <td>Kelua</td>
-                  </tr>
+                  <?php foreach ($mahasiswa as $i => $mhs) : ?>
+                    <tr>
+                      <td><?= esc($mhs['nama_mahasiswa']); ?></td>
+                      <td><?= esc($mhs['nim']); ?></td>
+                      <td><?= esc($mhs['jurusan']); ?></td>
+                      <td><?= esc($mhs['jenis_kelamin']); ?></td>
+                      <td><?= esc($mhs['email']); ?></td>
+                      <td><?= esc($mhs['alamat']); ?></td>
+                      <td>
+                        <a href="<?= base_url('mahasiswa/' . $mhs['nim']  . '/edit'); ?>" class="btn btn-success">Edit</a>
+                        <button type="button" class="btn btn-danger">Hapus</button>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

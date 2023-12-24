@@ -27,13 +27,10 @@ tombolJurusan.forEach((jurusan) => {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log(result);
-        fetch(
-          "http://localhost:8080/dashboard/jurusan/" + kodeJurusan + "/hapus",
-          {
-            method: "DELETE",
-            body: JSON.stringify({ kodeJurusan }),
-          }
-        )
+        fetch("http://localhost:8080/jurusan/" + kodeJurusan + "/hapus", {
+          method: "DELETE",
+          body: JSON.stringify({ kodeJurusan }),
+        })
           .then(() => {
             Swal.fire({
               title: "Berhasil",
@@ -65,17 +62,12 @@ tombolHapus.forEach((tombol) => {
       confirmButtonText: "Hapus",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          "http://localhost:8080/dashboard/matakuliah/" +
-            kodeMataKuliah +
-            "/hapus",
-          {
-            method: "DELETE",
-            body: JSON.stringify({
-              kode,
-            }),
-          }
-        )
+        fetch("http://localhost:8080/matakuliah/" + kodeMataKuliah + "/hapus", {
+          method: "DELETE",
+          body: JSON.stringify({
+            kode,
+          }),
+        })
           .then(() => {
             Swal.fire({
               title: "Deleted!",

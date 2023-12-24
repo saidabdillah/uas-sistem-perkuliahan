@@ -44,7 +44,7 @@
                       <td><?= esc($jrs['nama_jurusan']); ?></td>
                       <td>
 
-                        <a href="<?= base_url('/dashboard/jurusan/'); ?><?= $jrs['kode_jurusan']; ?>/edit" class="btn btn-success">Edit</a>
+                        <a href="<?= base_url('jurusan/' . $jrs['kode_jurusan'] . '/edit'); ?>" class="btn btn-success">Edit</a>
 
                         <button type="button" class="btn btn-danger hapus-jurusan" data-kode-jurusan="<?= $jrs['kode_jurusan']; ?>">Hapus</button>
                       </td>

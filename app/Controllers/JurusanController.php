@@ -2,12 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\JurusanModel;
+
 class JurusanController extends BaseController
 {
   public $jurusan;
   public function __construct()
   {
-    $this->jurusan = new \App\Models\JurusanModel();
+    $this->jurusan = new JurusanModel();
   }
 
   public function index(): string
@@ -57,12 +59,12 @@ class JurusanController extends BaseController
     ];
 
     if (!$validation->run($jurusan)) {
-      return redirect()->to('/dashboard/jurusan/tambah')->withInput()->with('validation', $validation);
+      return redirect()->to('/jurusan/tambah')->withInput()->with('validation', $validation);
     }
 
     $this->jurusan->insert($jurusan);
     $session->setFlashdata('berhasil', 'Jurusan Berhasil Ditambah.');
-    return redirect()->to('/dashboard/jurusan');
+    return redirect()->to('/jurusan');
   }
 
   public function edit($kodeJurusan)
@@ -105,7 +107,7 @@ class JurusanController extends BaseController
     if ($validation->run($jurusan)) {
       $this->jurusan->where('kode_jurusan', $kodeJurusan)->set($jurusan)->update();
       $session->setFlashdata('berhasil', 'Jurusan Berhasil Diubah.');
-      return redirect()->to('dashboard/jurusan');
+      return redirect()->to('/dashboard/jurusan');
     }
     return redirect()->back()->withInput()->with('validation', $validation);
   }
@@ -117,6 +119,6 @@ class JurusanController extends BaseController
     $this->jurusan->where('kode_jurusan', $kodeJurusan)->delete();
 
     $session->setFlashdata('berhasil', 'Jurusan Berhasil Dihapus.');
-    return redirect()->to('/dashboard/jurusan');
+    return redirect()->to('/jurusan');
   }
 }

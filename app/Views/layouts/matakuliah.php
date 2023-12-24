@@ -43,7 +43,7 @@
                       <td><?= esc($mk['kode_mata_kuliah']); ?></td>
                       <td><?= esc($mk['nama_mata_kuliah']); ?></td>
                       <td>
-                        <a href="<?= base_url('/dashboard/matakuliah/' . $mk['kode_mata_kuliah']) . '/edit'; ?>" class="btn btn-success">Edit</a>
+                        <a href="<?= base_url('matakuliah/' . $mk['kode_mata_kuliah']) . '/edit'; ?>" class="btn btn-success">Edit</a>
                         <button type="button" class="btn btn-danger btn-hapus" data-kode-mata-kuliah="<?= $mk['kode_mata_kuliah']; ?>">Hapus</button>
                       </td>
                     </tr>

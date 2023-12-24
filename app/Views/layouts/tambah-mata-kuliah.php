@@ -23,7 +23,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Tambah Mata Kuliah</h6>
           </div>
           <div class="card-body">
-            <form action="<?= base_url('dashboard/matakuliah'); ?>" method="POST">
+            <form action="<?= base_url('matakuliah'); ?>" method="POST">
               <?= csrf_field(); ?>
               <div class="mb-3">
                 <label for="kode_mata_kuliah" class="form-label">Kode Mata Kuliah</label>

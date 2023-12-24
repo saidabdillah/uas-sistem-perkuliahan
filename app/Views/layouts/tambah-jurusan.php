@@ -23,7 +23,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Tambah Jurusan</h6>
           </div>
           <div class="card-body">
-            <form action="<?= base_url('dashboard/jurusan'); ?>" method="POST">
+            <form action="<?= base_url('jurusan'); ?>" method="POST">
               <?= csrf_field(); ?>
               <div class="mb-3">
                 <label for="kode_jurusan" class="form-label">Kode Jurusan</label>
