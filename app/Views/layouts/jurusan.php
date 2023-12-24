@@ -46,36 +46,9 @@
 
                         <a href="<?= base_url('/dashboard/jurusan/'); ?><?= $jrs['kode_jurusan']; ?>/edit" class="btn btn-success">Edit</a>
 
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#<?= $jrs['kode_jurusan']; ?>">
-                          Hapus
-                        </button>
+                        <button type="button" class="btn btn-danger hapus-jurusan" data-kode-jurusan="<?= $jrs['kode_jurusan']; ?>">Hapus</button>
                       </td>
                     </tr>
-                    <!-- Modal -->
-                    <div class="modal fade" id="<?= $jrs['kode_jurusan']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Hapus Jurusan</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Hapus Jurusan <?= $jrs['nama_jurusan']; ?>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak
-                            </button>
-                            <form action="<?= base_url('dashboard/jurusan/'); ?><?= $jrs['kode_jurusan']; ?>" method="post" class="mx-0">
-                              <input type="hidden" name="_method" value="DELETE">
-                              <?= csrf_field(); ?>
-                              <button type="submit" class="btn btn-danger">Hapus</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   <?php endforeach; ?>
                 </tbody>
               </table>
@@ -85,7 +58,6 @@
       </div>
     </div>
   </section>
-
 </main>
 <!-- End of Main Content -->
 <?= $this->endSection(); ?>

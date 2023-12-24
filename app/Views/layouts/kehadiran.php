@@ -27,6 +27,7 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>NIM</th>
                     <th>Jurusan</th>
@@ -36,6 +37,7 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>1.</td>
                     <td>Muhammad Said Abdillah</td>
                     <td>220110054</td>
                     <td>Ilmu Komputer</td>

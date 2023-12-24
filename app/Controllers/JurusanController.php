@@ -21,7 +21,6 @@ class JurusanController extends BaseController
 
   public function create(): string
   {
-
     $validation = \Config\Services::validation();
     $data = [
       'title' => 'Jurusan',

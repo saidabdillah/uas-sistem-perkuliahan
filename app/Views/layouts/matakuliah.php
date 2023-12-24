@@ -17,10 +17,13 @@
 
   <section class="container-fluid">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Mata Kuliah</h6>
+            <?php if (session()->getFlashdata('berhasil')) : ?>
+              <div data-berhasil="<?= session()->getFlashdata('berhasil'); ?>" class="msg-berhasil"></div>
+            <?php endif; ?>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -28,8 +31,9 @@
                 <thead>
                   <tr>
                     <th>No</th>
+                    <th>Kode Mata Kuliah</th>
                     <th>Mata Kuliah</th>
-                    <th>Jurusan</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,6 +42,10 @@
                       <td><?= esc($i += 1); ?>.</td>
                       <td><?= esc($mk['kode_mata_kuliah']); ?></td>
                       <td><?= esc($mk['nama_mata_kuliah']); ?></td>
+                      <td>
+                        <a href="<?= base_url('/dashboard/matakuliah/' . $mk['kode_mata_kuliah']) . '/edit'; ?>" class="btn btn-success">Edit</a>
+                        <button type="button" class="btn btn-danger btn-hapus" data-kode-mata-kuliah="<?= $mk['kode_mata_kuliah']; ?>">Hapus</button>
+                      </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
@@ -48,7 +56,6 @@
       </div>
     </div>
   </section>
-
 </main>
 <!-- End of Main Content -->
 <?= $this->endSection(); ?>

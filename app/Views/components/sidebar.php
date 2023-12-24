@@ -81,6 +81,7 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Mata Kuliah:</h6>
         <a class="collapse-item" href="<?= base_url('dashboard/matakuliah'); ?>">Lihat</a>
+        <a class="collapse-item" href="<?= base_url('dashboard/matakuliah/tambah'); ?>">Tambah</a>
       </div>
     </div>
   </li>
