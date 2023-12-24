@@ -39,4 +39,9 @@ class MahasiswaController extends BaseController
   {
     dd($nim);
   }
+
+  public function delete($nim)
+  {
+    $this->mahasiswa->where('nim', $nim)->delete();
+  }
 }

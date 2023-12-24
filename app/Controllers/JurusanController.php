@@ -114,11 +114,6 @@ class JurusanController extends BaseController
 
   public function delete($kodeJurusan)
   {
-    $session = \Config\Services::session();
-
     $this->jurusan->where('kode_jurusan', $kodeJurusan)->delete();
-
-    $session->setFlashdata('berhasil', 'Jurusan Berhasil Dihapus.');
-    return redirect()->to('/jurusan');
   }
 }

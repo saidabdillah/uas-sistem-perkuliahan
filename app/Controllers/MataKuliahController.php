@@ -123,8 +123,6 @@ class MataKuliahController extends BaseController
 
   public function delete($kodeMataKuliah)
   {
-    $session = \Config\Services::session();
     $this->mataKuliah->where('kode_mata_kuliah', $kodeMataKuliah)->delete();
-    return redirect()->to('/matakuliah')->with('berhasil', 'Mata Kuliah Berhasil Dihapus.');
   }
 }

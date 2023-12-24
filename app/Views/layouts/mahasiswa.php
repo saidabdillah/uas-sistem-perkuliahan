@@ -47,7 +47,7 @@
                       <td><?= esc($mhs['alamat']); ?></td>
                       <td>
                         <a href="<?= base_url('mahasiswa/' . $mhs['nim']  . '/edit'); ?>" class="btn btn-success">Edit</a>
-                        <button type="button" class="btn btn-danger">Hapus</button>
+                        <button type="button" class="btn btn-danger hapus-mahasiswa" data-nim-mahasiswa="<?= esc($mhs['nim']); ?>">Hapus</button>
                       </td>
                     </tr>
                   <?php endforeach; ?>

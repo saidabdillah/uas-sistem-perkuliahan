@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url() ?>">
@@ -37,7 +37,6 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Mahasiswa:</h6>
         <a class="collapse-item" href="<?= base_url('mahasiswa'); ?>">Lihat</a>
-        <a class="collapse-item" href="<?= base_url('mahasiswa/tambah'); ?>">Tambah</a>
       </div>
     </div>
   </li>

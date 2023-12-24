@@ -20,6 +20,7 @@ $routes->post('/login', 'LoginController::store');
 $routes->get('/mahasiswa', [MahasiswaController::class, 'index']);
 $routes->get('/mahasiswa/(:num)/edit', [MahasiswaController::class, 'edit']);
 $routes->put('/mahasiswa/(:num)/update', [MahasiswaController::class, 'update']);
+$routes->delete('/mahasiswa/(:num)/hapus', [MahasiswaController::class, 'delete']);
 
 // Mata Kuliah
 $routes->get('/matakuliah', [MataKuliahController::class, 'index']);
